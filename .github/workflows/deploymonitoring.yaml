@@ -22,7 +22,7 @@ jobs:
 
       - name: Get AKS Credentials
         run: |
-          az aks get-credentials --resource-group ${{ secrets.RESOURCE_GROUP }} --name platform1aks1
+          az aks get-credentials --resource-group node_app --name platform1aks1
 
       - name: Deploy Prometheus
         run: |
