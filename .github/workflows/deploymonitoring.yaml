@@ -27,12 +27,12 @@ jobs:
       - name: Deploy Prometheus
         run: |
           cp -r ./monitoring-infra/* .
-          kubectl apply -f ./monitoring-infra/prometheus.yaml
+          kubectl apply -f ./monitoring-infra/prometheus.yml
 
       - name: Deploy Grafana
         run: |
           cp -r ./monitoring-infra/* .
-          kubectl apply -f ./monitoring-infra/grafana.yaml
+          kubectl apply -f ./monitoring-infra/grafana.yml
 
       - name: Wait for Services
         run: |
