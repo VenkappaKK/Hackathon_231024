@@ -1,0 +1,27 @@
+CI/CD Pipelines
+This hackathon use case focuses on a scenario where DevOps engineers create continuous integration/continuous deployment (CI/CD) pipelines and deploy applications in Kubernetes cluster.
+Objective:
+To demonstrate the capabilities to create CI CD Pipelines and integrating with SonarQ, SAST, DAST, Artifactory.
+Tools:
+	• Kubernetes Cluster: A fully functioning Kubernetes cluster for deployment purposes.
+	• Source Code Repository: Access to a Git repository where application code is stored.
+	• CI/CD Tools: Jenkins , GitLab CI, or any other preferred CI/CD tool for building pipelines.
+	• Code Quality and Coverage: SonarQube for performing automated code reviews to identify and fix bugs, vulnerabilities, and code smells
+	• Container Registry: Docker Hub or a private container registry for storing container images.
+	• Monitoring and Logging Tools: Prometheus, Grafana, and ELK Stack for observing and troubleshooting deployments.
+Use Case Scenario
+	• Application : All Tools will be available to the team and they will require to develop CICD Pipelines for different Architypes of Applications. 
+		○ ReactJS / Angular JS
+		○ Java / Node
+		○ Data Pipelines.
+	• CI/CD Pipeline
+	• Code Integration: Implementing a mechanism to trigger the pipeline whenever changes are pushed to the repository.
+	• Build Stage: Creating Docker images from the application code and pushing them to the container registry.
+	• Test Stage: Running automated tests to validate the integrity of the application.
+	• Deployment Stage: Deploying the application to the Kubernetes cluster using Helm charts or Kubernetes manifests.
+	• Rollback Strategy: Implementing a rollback mechanism in case of deployment failures.
+	• Containerization: Ensuring that the application is packaged into Docker containers.
+	• Deployment Configuration: Creating Kubernetes manifests or Helm charts to define the deployment configuration.
+	• Deployment Execution: Using the CI/CD pipeline to deploy the application to the Kubernetes cluster.
+	• Monitoring: Configuring Prometheus and Grafana to track metrics and visualize application performance.
+	• Logging: Setting up the ELK Stack (Elasticsearch, Logstash, Kibana) to collect and analyze logs
