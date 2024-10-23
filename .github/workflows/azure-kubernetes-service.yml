@@ -39,7 +39,7 @@ jobs:
 
         - name: Deploy to AKS
           run: |
-            kubectl apply -f deployment.yaml -n platform1aks1
+            kubectl apply -f deployment.yml -n platform1aks1
             kubectl set image deployment/dssp dssp=${{ secrets.REGISTRY_LOGIN_SERVER }}/dssp:${{ github.sha }} -n platform1aks1
             kubectl rollout status deployment/dssp -n platform1aks1
 
