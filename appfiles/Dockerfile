@@ -19,4 +19,4 @@ EXPOSE 8080
 # Command to run your application
 # CMD ["pm2", "start", "appointment-service.js", "patient-service.js"]
 
-CMD ["sh", "-c", "node appointment-service.js && node patient-service.js"]
+CMD ["node", "patient-service.js"]
