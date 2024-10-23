@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 8080
 
 # Command to run your application
 CMD ["pm2", "start", "appointment-service.js", "patient-service.js"]
