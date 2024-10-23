@@ -37,7 +37,6 @@ resource "azurerm_container_registry" "hackathon_acr" {
   resource_group_name = azurerm_resource_group.rg_hackathon.name
   location            = azurerm_resource_group.rg_hackathon.location
   sku                 = "Premium"
-  admin_enabled       = false
 }
 
 # add the role to the identity the kubernetes cluster was assigned
