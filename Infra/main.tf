@@ -10,7 +10,6 @@ resource "azurerm_kubernetes_cluster" "hackathon_aks" {
   location            = azurerm_resource_group.rg_hackathon.location
   resource_group_name = azurerm_resource_group.rg_hackathon.name
   dns_prefix          = "hackathon-k8s"
-  kubernetes_version  = "1.26.3"
 
   default_node_pool {
     name            = "default"
