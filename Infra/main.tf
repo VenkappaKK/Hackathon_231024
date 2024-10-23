@@ -22,6 +22,7 @@ resource "azurerm_kubernetes_cluster" "hackathon_aks" {
   identity {
     type = "SystemAssigned"
   }
+
   role_based_access_control_enabled = true
 
 
@@ -41,7 +42,8 @@ resource "azurerm_container_registry" "hackathon_acr" {
 
 # add the role to the identity the kubernetes cluster was assigned
 resource "azurerm_role_assignment" "kubweb_to_acr" {
-  scope                = azurerm_container_registry.hackathon_acr.id
-  role_definition_name = "AcrPull"
-  principal_id         = azurerm_kubernetes_cluster.hackathon_aks.kubelet_identity[0].object_id
+  principal_id                     = azurerm_kubernetes_cluster.hackathon_aks.kubelet_identity[0].object_id
+  role_definition_name             = "AcrPull"
+  scope                            = azurerm_container_registry.hackathon_acr.id
+  skip_service_principal_aad_check = true
 }
