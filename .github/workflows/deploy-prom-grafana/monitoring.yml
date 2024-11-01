@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     push:
       paths:
-        - 'Apps/Platform2/**'
+        - 'monitoring-infra/**'
 
 jobs:
   deploy:
@@ -34,13 +34,13 @@ jobs:
 
       - name: Deploy Prometheus
         run: |
-          cp -r ./Apps/Platform2/* .
-          kubectl apply -f ./prometheus.yaml
+          cp -r ./monitoring-infra/* .
+          kubectl apply -f ./prometheus.yml
 
       - name: Deploy Grafana
         run: |
-          cp -r ./Apps/Platform2/* .
-          kubectl apply -f ./grafana.yaml
+          cp -r ./monitoring-infra/* .
+          kubectl apply -f ./grafana.yml
 
       # Optional: Deploy Ingress
       # - name: Deploy Ingress Resource
