@@ -26,7 +26,7 @@ jobs:
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
             cp -r ./appfiles/* .
-            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dssp:${{ github.sha }}
+            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dssp:${{ github.sha }}  #looks like there is a mistake in this line, we need to put the . at the end.
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/dssp:${{ github.sha }}
 
         - name: Set up kubectl
